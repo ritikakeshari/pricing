@@ -1,0 +1,128 @@
+<div class="container-fluid">
+  <div class="text-primary d-flex flex-column justify-content-center text-center mt-5 heading">
+     <h1>Simple And Flexible Pricing</h1>
+     <p>Choose a plan that fits your needs best</p>
+  </div>
+  <div class="form-switch text-center m-3">
+    <span class="fw-bolder m-3">Montly Plan</span>
+    <input type="checkbox" class="form-check-input ms-3 me-3" (change)="change()">
+    <span class="fw-bolder m-3">Yearly Plan</span>
+  </div>
+
+  <div *ngIf="isvisible; else elseblock" class="d-flex justify-content-between m-5">
+  <div class="card d-flex">
+    <div class="card-header text-center header1">
+      <h2 class="text-center">Personal</h2>
+      <p class="text-center">for you</p>
+      <sup>₹</sup><span class="text-center fw-bold fontSize">9</span><sub>/month</sub>
+    </div>
+    <div class="p-3">
+      <ul class="list-unstyled">
+        <li class="fw-bold">&#10003; 20GB Storage</li>
+        <li class="fw-bold">&#10003; 1 Site</li>
+        <li>&#10007; Backups</li>
+        <li>&#10007; priority support</li>
+      </ul>
+    </div>
+    <div class="text-center pb-4">
+      <button class="text-light rounded-3 btn1">Sign Up</button>
+    </div>
+  </div>
+  <div class="card d-flex">
+    <div class="card-header text-center header1">
+      <h2 class="text-center">Agency</h2>
+      <p class="text-center">for your team</p>
+      <sup>₹</sup><span class="text-center fw-bold fontSize">19</span><sub>/month</sub>
+    </div>
+    <div class="p-3">
+      <ul class="list-unstyled">
+        <li class="fw-bold">&#10003; 500GB Storage</li>
+        <li class="fw-bold">&#10003; 20 Site</li>
+        <li class="fw-bold">&#10003; Backups</li>
+        <li>&#10007; priority support</li>
+      </ul>
+    </div>
+    <div class="text-center pb-4">
+      <button class="text-light rounded-3 btn1">Sign Up</button>
+    </div>
+  </div>
+  <div class="card d-flex">
+    <div class="card-header text-center header1">
+      <h2 class="text-center">Unlimited</h2>
+      <p class="text-center">no limits</p>
+      <sup>₹</sup><span class="text-center fw-bold fontSize">29</span><sub>/month</sub>
+    </div>
+    <div class="p-3">
+      <ul class="list-unstyled">
+        <li class="fw-bold">&#10003; UnlimitedStorage</li>
+        <li class="fw-bold">&#10003; Unlimited Site</li>
+        <li class="fw-bold">&#10003; Backups</li>
+        <li class="fw-bold">&#10003; priority support</li>
+      </ul>
+    </div>
+    <div class="text-center pb-4">
+      <button class="text-light rounded-3 btn1">Sign Up</button>
+    </div>
+  </div>
+</div>
+  <!--afterchange-->
+  <ng-template #elseblock>
+  <div class="d-flex justify-content-between m-5">
+    <!--yearly plans-->
+    <div class="card d-flex">
+      <div class="card-header text-center header2">
+        <h2 class="text-center">Personal</h2>
+        <p class="text-center">for you</p>
+        <sup>₹</sup><span class="text-center fw-bold fontSize">99</span><sub>/year</sub>
+      </div>
+      <div class="p-3">
+        <ul class="list-unstyled">
+          <li class="fw-bold">&#10003; 20GB Storage</li>
+          <li class="fw-bold">&#10003; 1 Site</li>
+          <li>&#10007; Backups</li>
+          <li>&#10007; priority support</li>
+        </ul>
+      </div>
+      <div class="text-center pb-4">
+        <button class="text-light rounded-3 btn2">Sign Up</button>
+      </div>
+    </div>
+    <div class="card d-flex">
+      <div class="card-header text-center header2">
+        <h2 class="text-center">Agency</h2>
+        <p class="text-center">for your team</p>
+        <sup>₹</sup><span class="text-center fw-bold fontSize">209</span><sub>/year</sub>
+      </div>
+      <div class="p-3">
+        <ul class="list-unstyled">
+          <li class="fw-bold">&#10003; 500GB Storage</li>
+          <li class="fw-bold">&#10003; 20 Site</li>
+          <li class="fw-bold">&#10003; Backups</li>
+          <li>&#10007; priority support</li>
+        </ul>
+      </div>
+      <div class="text-center pb-4">
+        <button class="text-light rounded-3 btn2">Sign Up</button>
+      </div>
+    </div>
+    <div class="card d-flex">
+      <div class="card-header text-center header2">
+        <h2 class="text-center">Unlimited</h2>
+        <p class="text-center">fno limit</p>
+        <sup>₹</sup><span class="text-center fw-bold fontSize">319</span><sub>/year</sub>
+      </div>
+      <div class="p-3">
+        <ul class="list-unstyled">
+          <li class="fw-bold">&#10003; Unlimited Storage</li>
+          <li class="fw-bold">&#10003; Unlimited Site</li>
+          <li class="fw-bold">&#10003; Backups</li>
+          <li class="fw-bold">&#10003; priority support</li>
+        </ul>
+      </div>
+      <div class="text-center pb-4">
+        <button class="text-light rounded-3 btn2">Sign Up</button>
+      </div>
+   </div>
+  </div>
+  </ng-template>
+</div>

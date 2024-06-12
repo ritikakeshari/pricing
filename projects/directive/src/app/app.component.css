@@ -1,0 +1,48 @@
+*{
+    color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading{
+    background-color: rgb(255, 224, 252);
+    padding: 20px;
+
+}
+.fontSize{
+  font-size: 32px;
+}
+.form-check-input{
+    background-color: blueviolet;
+}
+.card{
+    width: 400px;
+    height:350px;
+    border-color: purple;
+    border-width: 5px;
+    box-shadow: 3px 3px grey;
+}
+.header1{
+    background-color:rgb(255, 224, 252);
+}
+.header2{
+    background-color:rgb(202, 228, 252)
+}
+.btn1{
+    background: blueviolet;
+    box-shadow: 3px 3px grey;
+    border: none;
+    cursor: pointer;
+  }
+.btn2{
+    background: rgb(0, 107, 214);
+    box-shadow: 3px 3px grey;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+.btn1:hover {
+    background-color: #79123b;
+  }
+.btn2:hover {
+    background-color: #4d26fe;
+  }
