@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <app-header [count]="c"></app-header>
+  <section class="row mt-3">
+    <nav class="col-2">
+      <label class="form-label fw-bold">Select Category</label>
+      <div>
+        <select class="form-select" >
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+    </nav>
+    <main class="col-10 overflow-auto d-flex justify-content-center" style="max-height:700px">
+    <div class="row w-100 justify-content-center">
+    <div class="col-auto" *ngFor="let product of products">
+    <div class= "card p-2 m-2" style="width:200px">
+      <img src="{{product.image}}" class="card-img-top" height="120">
+      <div class="card-header overflow-auto" style="height:120px" >
+          {{product.title}}
+      </div>
+      <div>
+        <dl>
+          <dt>Price</dt>
+          <dd>{{product.price}}</dd>
+          <dt>Rating</dt>
+          <dd>{{product.rating.rate}}<span class="bi bi-star-fill text-success">{{product.rating.count}}</span></dd>
+        </dl>
+      </div>
+      <div cladd="card-footer">
+        <button class="btn btn-dark w-100 bi bi-card3" (click)="addFav()">Add To Card</button>
+      </div>
+    </div>
+    </div>
+    </div>
+    </main>
+  </section>
+</div>

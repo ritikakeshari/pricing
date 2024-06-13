@@ -1,0 +1,9 @@
+.card:hover {
+    transform: scale(1.05);
+}
+.card {
+    transition: all 2s ease;
+}
+button:hover{
+    background-color: red;
+}
