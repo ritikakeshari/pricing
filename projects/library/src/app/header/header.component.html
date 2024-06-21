@@ -1,0 +1,46 @@
+
+	<header class="position-sticky top-0">
+        <div class="p-3 bg-dark text-white d-flex justify-content-between">
+        <div class="d-inline-block">
+          <button class="btn btn-dark bi bi-justify-left mb-2 " data-bs-toggle="offcanvas" data-bs-target="#navbar"></button>
+          <div class="d-inline-block">
+          <h3>Library.</h3>
+          </div>
+          <div class="offcanvas offcanvas-start bg-danger text-white" tabindex="-1" id="navbar">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title">Library.</h1>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ol>
+                <li class="my-3">Library</li>
+                <li class="my-3">Dashboard</li>
+                <li class="my-3">Publish</li>
+                <li class="my-3">Lending</li>
+                <li class="my-3">Management</li>
+                <li class="my-3">Report</li>
+             </ol>    
+            </div>
+         </div>
+        </div>
+          <div>
+            <a routerLink="home" class="me-3 text-decoration-none link-light">Home</a>
+            <a routerLink="product" class="me-3 text-decoration-none link-light">Product</a>
+            <a routerLink="admin-login" class="me-3 text-decoration-none link-light">Admin</a>
+            <a routerLink="student_login" class="me-3 text-decoration-none link-light">Student Login</a>
+            <a  routerLink="contact-form" class="me-3 text-decoration-none link-light">Contact Us</a>
+          </div>
+          <div>
+            <button class="bi bi-search me-2 bg-dark text-white"></button>
+            <button class="bi bi-person-gear me-2 bg-dark text-white"></button>
+            <button class="bi bi-cart-fill me-2 bg-dark text-white"></button>
+            <button class="bi bi-chat-square-text-fill me-2 bg-dark text-white"></button>
+          </div>
+        </div>
+        <article class="bg-danger text-white p-2 text-center">
+          <span class="bi text-warning bi-lightning-fill"></span>
+          <span>INTEGRATED LIBRARY FOR ALL</span>
+          <span class="bi text-warning bi-lightning-fill"></span>
+        </article>
+    </header>
+    <router-outlet></router-outlet> 

@@ -1,0 +1,123 @@
+<!-- Breadcrumb Block -->
+<section class="mt-5">
+  <div class="bg-light py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <h1 class="fw-bold">Contact us</h1>
+        <nav class="pt-3" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-decoration-none text-dark" routerLink="home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  <main>
+  <div class="container py-5">
+    <div class="row g-5">
+  
+      <!-- Contact Information Block -->
+  
+      <div class="col-xl-6">
+        <div class="row row-cols-md-2 g-4">
+          <div class="aos-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="aos-item__inner">
+              <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+                <div class="d-flex justify-content-start">
+                  <i class="fa-solid fa-envelope h3 pe-2"></i>
+                  <span class="h5">Email</span>
+                </div>
+                <span>info&#64;library.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="aos-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="aos-item__inner">
+              <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+                <div class="d-flex justify-content-start">
+                  <i class="fa-solid fa-phone h3 pe-2"></i>
+                  <span class="h5">Phone</span>
+                </div>
+                <span>+919876543210, +917766554488</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aos-item mt-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="aos-item__inner">
+            <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+              <div class="d-flex justify-content-start">
+                <i class="fa-solid fa-location-pin h3 pe-2"></i>
+                <span class="h5">Office location</span>
+              </div>
+              <span>Naresh IT Ameerpet, Hyderabad, Telengana, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="aos-item" data-aos="fade-up" data-aos-delay="800">
+          <div class="mt-4 w-100 aos-item__inner">
+            <iframe class="hvr-shadow" width="100%" height="345" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Contact Form Block -->
+      <form class="col-xl-6 ContactUs" #ContactForm="ngForm" (ngSubmit)="onsubmit(ContactForm)">
+        <h2 class="pb-4">Leave a message</h2>
+        <div class="row g-4">
+          <div class="col-6 mb-3">
+            <label for="" class="form-label">First name</label>
+            <input type="text" class="form-control" placeholder="first name" name="fname" #fname="ngModel" ngModel required minlength="3">
+            <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="fname.touched && fname.errors?.['required']">*First Name is required</div>
+            <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="fname.touched && fname.errors?.['minlength']">*Minimum 3 characters required</div>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="" class="form-label">Last name</label>
+            <input type="text" class="form-control" placeholder="last name" name="lname" #lname="ngModel" ngModel required minlength="3">
+            <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="lname.touched && lname.errors?.['required']">*Last Name is required</div>
+            <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="lname.touched && lname.errors?.['minlength']">*Minimum 3 characters required</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="xyz@gmail.com" name="email" #email="ngModel" ngModel required email />
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="email.touched && email.errors?.['required']">*Email is required</div>
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="email.touched && email.errors?.['email']">*Email is invalid</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Phone</label>
+          <input type="tel" class="form-control" placeholder="+910000000000" name="phoneno" #phoneno="ngModel" ngModel required minlength="10" />
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="phoneno.touched && phoneno.errors?.['required']">*PhoneNo. is required</div>
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="phoneno.touched && phoneno.errors?.['minlength']">*PhoneNo. is invalid</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Country</label>
+          <select class="form-select" aria-label="Default select example" name="country" #country="ngModel" ngModel required>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UAE">UAE</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Australia">Australia</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Belgium">Belgium</option>
+            <option value="China">China</option>
+            <option value="Canada">Canada</option>
+          </select>
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="country.touched && country.errors?.['required']">*Country is required</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" #message="ngModel" ngModel required></textarea>
+          <div class="error text-light border rounded-pill bg-danger d-flex justify-content-center align-item-end" *ngIf="message.touched && message.errors?.['required']">*Message is required</div>
+        </div>
+        <button type="submit" class="btn btn-dark">Send Message</button>
+      </form>
+    </div>
+  </div>
+  </main>
+  
+  <router-outlet></router-outlet>
+  
